@@ -1,0 +1,16 @@
+<div class="container mt-3 d-flex justify-content-center">
+    <div class="col-4">
+      <input class="form-control me-2" type="search" (keyup)="search($event)" [(ngModel)]="searchValue" placeholder="Search" aria-label="Search">
+    </div>
+  </div>
+  
+  
+<div *ngIf="students.length>0 ; noStudent">
+
+    <app-student *ngFor="let student of students" [studentInfo]="student"></app-student>
+<ng-template>
+
+<p class="alert  alert-danger" #noStudent >no student to show</p>
+</ng-template>
+
+</div>

@@ -1,0 +1,8 @@
+
+<div class="card text-center" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{student.name}}</h5>
+      <p class="card-text">{{student.email}}</p>
+      <a [routerLink]="['students', student.id]" class="btn btn-primary">Show Details</a>
+    </div>
+  </div>
